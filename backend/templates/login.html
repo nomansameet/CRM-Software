@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="login-container">
+
+<div class="login-card">
+<h2>CRM Login</h2>
+
+<div class="input-group">
+<input id="user" placeholder="Username">
+</div>
+
+<div class="input-group">
+<input id="pass" type="password" placeholder="Password">
+</div>
+
+<div class="button-group">
+    <button class="btn" onclick="login()">Login</button>
+    <button class="btn secondary" onclick="window.location='/signup-page'">
+        Sign Up
+    </button>
+</div>
+
+
+<p style="margin-top:15px;text-align:center;">
+Don't have an account?
+<a href="/signup-page">Sign Up</a>
+</p>
+
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

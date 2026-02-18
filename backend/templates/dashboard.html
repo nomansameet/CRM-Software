@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="layout">
+
+<div class="sidebar">
+<h2>CRM System</h2>
+<a href="/dashboard">Dashboard</a>
+<a href="/leads-page">Leads</a>
+<a href="#" onclick="toggleDarkMode()">Dark Mode</a>
+</div>
+
+<div class="main-content">
+<h1>Dashboard</h1>
+
+<div class="stats-grid">
+<div class="card stat-card"><h3>New</h3><p id="newCount">0</p></div>
+<div class="card stat-card"><h3>Contacted</h3><p id="contactedCount">0</p></div>
+<div class="card stat-card"><h3>Won</h3><p id="wonCount">0</p></div>
+</div>
+
+<div class="card">
+<canvas id="chart"></canvas>
+</div>
+
+<div class="spinner" id="loader"></div>
+</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

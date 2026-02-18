@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="layout">
+
+<div class="sidebar">
+<h2>CRM System</h2>
+<a href="/dashboard">Dashboard</a>
+<a href="/leads-page">Leads</a>
+</div>
+
+<div class="main-content">
+<h1>Sales Pipeline</h1>
+
+<div class="lead-board">
+<div class="lead-column" ondragover="allowDrop(event)" ondrop="drop(event,'New')"><h3>New</h3></div>
+<div class="lead-column" ondragover="allowDrop(event)" ondrop="drop(event,'Contacted')"><h3>Contacted</h3></div>
+<div class="lead-column" ondragover="allowDrop(event)" ondrop="drop(event,'Won')"><h3>Won</h3></div>
+</div>
+
+</div>
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
