@@ -229,7 +229,4 @@ Flask Full Stack Developer
 
 This project is for educational and demonstration purposes.
 
----
-
-
-Tell me your next goal.
+--- me your next goal.
