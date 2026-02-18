@@ -228,5 +228,3 @@ Flask Full Stack Developer
 ## License
 
 This project is for educational and demonstration purposes.
-
---- me your next goal.
