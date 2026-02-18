@@ -1,0 +1,295 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ===============================
+   DARK MODE
+================================ */
+.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .card,
+.dark-mode .lead-column {
+    background: #1e1e1e;
+}
+
+.dark-mode .lead-card {
+    background: #2a2a2a;
+}
+
+/* ===============================
+   LAYOUT
+================================ */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===============================
+   SIDEBAR
+================================ */
+.sidebar {
+    width: 240px;
+    background: linear-gradient(180deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 25px 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* ===============================
+   MAIN CONTENT
+================================ */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* ===============================
+   CARDS
+================================ */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* ===============================
+   STATS GRID
+================================ */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2a5298;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background: #2a5298;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #1e3c72;
+}
+
+/* ===============================
+   LOGIN PAGE
+================================ */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e3c72;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #2a5298;
+    outline: none;
+}
+
+/* ===============================
+   TABLES
+================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background: #f9f9f9;
+}
+
+/* ===============================
+   LEAD BOARD
+================================ */
+.lead-board {
+    display: flex;
+    gap: 20px;
+}
+
+.lead-column {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 350px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.lead-column h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.lead-card {
+    background: #f4f6f9;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: grab;
+    transition: 0.2s ease;
+}
+
+.lead-card:hover {
+    background: #e2e8f5;
+}
+
+/* ===============================
+   SPINNER
+================================ */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #2a5298;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* ===============================
+   TOAST NOTIFICATION
+================================ */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2a5298;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .lead-board {
+        flex-direction: column;
+    }
+}
+
+.button-group{
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+}
+
+.secondary{
+    background:#f3f4f6;
+    color:#111827;
+    border:1px solid #d1d5db;
+}
+
+.secondary:hover{
+    background:#e5e7eb;
+}
